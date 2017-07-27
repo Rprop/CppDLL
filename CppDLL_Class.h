@@ -258,7 +258,7 @@ __continue_next:
 			name.substring(0, k);
 		} //if
 		intptr_t operator_index = name.IndexOfR(_T("::operator "));
-		if (operator_index > 0) name.Replace(_T(" "), _T("?"), operator_index + RLIB_COUNTOF_STR(_T("::operator")));
+		if (operator_index > 0) name.replace(_T(" "), _T("?"), operator_index + RLIB_COUNTOF_STR(_T("::operator")));
 		k = name.LastIndexOf(_T(" "));
 		if (name.IndexOf(_T("<")) == -1) {
 			ei.type = name.Substring(0, k);
